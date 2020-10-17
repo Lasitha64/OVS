@@ -110,17 +110,17 @@ body{
 
 
 #footer1{
-	background-color:black;
-	width:100%;
-	height:20%;
-	margin-top:80%;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+	
 }
 #footer2{
-	background-color:black;
-	width:100%;
-	height:20%;
-	margin-top:120%;
-}
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    margin-top: 75%;
+}	
 #footer3{
 	background-color:black;
 	width:100%;
@@ -226,7 +226,9 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
-
+.active{
+		background-color : #ffcc00;
+}
 
 
 
