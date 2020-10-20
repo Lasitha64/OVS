@@ -1,0 +1,90 @@
+<html>
+<head>
+
+
+	<link rel="stylesheet" href="css/Astyles1.css">
+        <script src="js/myScript.js"></script>
+
+
+</head>
+<body>
+	<div class = "header">
+		<img src = "img/logo.png" width = "120" height="100" style="float:left">
+		<a href="contactus.php" class="contactus">Contact us</a><br></br>
+		<div class="navigationbar">
+			<a class="active" href="home.html">Home</a>
+			<a href="aboutus.html">About us</a>
+			<a href="member.html">Members</a>
+			<a href="news.html">News</a>
+			<a href="awards.html">Awards</a>
+			
+				<input type="text" class="searchbar" placeholder="Search.." name="search">
+			
+				<button type="submit" class="icon">search</button>
+			
+		</div>
+ 
+		
+	
+	<ul>
+			<li><a href="register.html">Guest Registration</a></li>
+			<li><a href="guestlogin.html">Guest Log in</a></li>
+			<li><a href="memberlogin.html">Members Log in</a></li>
+			<li><a href="nominations.html">Nominations</a></li>
+			<li><a href="#about">Event Gossip</a></li>
+			<li><a href="rulesandfacts.html">Rules and Facts</a></li>
+		</ul>
+
+<p class="topic5">Registration Form</p><br>
+<form class="r" method="post">
+  
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+  <label for="phone"> Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="011-3456789" pattern="[0-9]{3}-[0-9]{7}" required><br><br>
+  <label for="email"> Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="Address">Address:</label><br>
+  <textarea id="w3review" name="w3review" rows="4" cols="50">
+  </textarea><br><br>
+  <label for="birthday">Birthday:</label><br>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  
+  <div class="password">
+    
+
+  <label for="psw">Password:</label><br>
+  <input id = "p1" type="password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+  
+  <label for="psw"> Retype Password:</label><br>
+  <input id = "p2" type="password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+
+  <input onclick="checkPassword()" type="submit" value="Submit">
+
+</div>
+
+
+</form>
+
+	
+        
+
+	<div id="footer2" >
+	<br></br>
+	<div class="footer">
+<div class="email">Email : Gacd@gmail.com</div>
+
+
+
+</div>
+	</div>
+</body>
+</html>
