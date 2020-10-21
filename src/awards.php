@@ -1,3 +1,7 @@
+<?php 
+	include_once 'config1.php';
+
+?>
 <html>
 <head>
 	<link rel="stylesheet" href="css/styles3.css">
@@ -52,20 +56,22 @@ newd()
 		<p class="topic"> AWARDS </p>
 		<br></br>
 <?php 
-	$sql = "select *from awards";
-	$result = $conn->query($sql);
-	echo "<table>";
+	$sql1 = "select *from awards";
+	$result = $conn1->query($sql1);
+	
 	if($result->num_rows>0){
+		echo"<table>";
 		while($row = $result->fetch_assoc()){
 			
 			echo "<tr><td>".$row["Award ID"]."</td><td>".$row["Judge Name"]."</td><td> ".$row["Award category"]."</td><td>".$row["Award name"]."</td></tr>";
 		}
+		echo "</table>";
 	}
 	else{
 		echo "0 results";
-	}echo "</table>";
+	}
 
-$conn->close();
+$conn1->close();
 ?>		
 
 <br></br><br></br>
