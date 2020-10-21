@@ -25,7 +25,7 @@ newd()
 			<a href="aboutus.html">About us</a>
 			<a href="member.html">Members</a>
 			<a href="news.html">News</a>
-			<a class = "active" href="awards.html">Awards</a>
+			<a class = "active" href="awards.php">Awards</a>
 	
 			
 				<input type="text" class="searchbar" placeholder="Search.." name="search">
@@ -51,12 +51,25 @@ newd()
 	<div class= "column1">	
 		<p class="topic"> AWARDS </p>
 		<br></br>
-		
-		<button class="fluid ui button">Awards under "BEST" category(Selected by Members of the Academy)</button>
+<?php 
+	$sql = "select *from awards";
+	$result = $conn->query($sql);
+	echo "<table>";
+	if($result->num_rows>0){
+		while($row = $result->fetch_assoc()){
+			
+			echo "<tr><td>".$row["Award ID"]."</td><td>".$row["Judge Name"]."</td><td> ".$row["Award category"]."</td><td>".$row["Award name"]."</td></tr>";
+		}
+	}
+	else{
+		echo "0 results";
+	}echo "</table>";
+
+$conn->close();
+?>		
+
 <br></br><br></br>
-<button class="fluid ui button">Awards under "popular" category(Selected by people)</button>
-<br></br><br></br>
-<button class="fluid ui button">Special Awards (selected by an EXpert Panel of judges)</button>
+<button> <a href= "Add Award.html"> Add Award</a> </button>
 <br></br>
 	</div>
 	
