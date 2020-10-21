@@ -68,7 +68,7 @@
 	if($result->num_rows>0){
 		while($row = $result->fetch_assoc()){
 			
-			echo "<h2>".$row["Comment_ID"]."</h2></br><h2>".$row["First_Name"]."</h2></br><h2>".$row["Last_Name"]."</h2></br><h3>".$row["Comment"]."</h3></br><hr>";
+			echo "<h3>".$row["Comment_ID"]."  ".$row["First_Name"]." ".$row["Last_Name"]."</h3></br><p>".$row["Comment"]."</p><hr>";
 		}
 	}
 	else{
