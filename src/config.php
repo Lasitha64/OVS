@@ -4,7 +4,7 @@ $username="root";
 $password="";
 $db = "commentdb";
 $db1 = "awards";
-$db2="register";
+$db2="register1";
 
 
 $conn = new mysqli($servername, $username, $password, $db);
