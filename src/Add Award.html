@@ -1,3 +1,11 @@
+<?php
+     include_once 'config1.php';
+
+
+
+
+?>
+
 <html>
 <head>
 	<link rel="stylesheet" href="css/styles.css">
@@ -6,11 +14,11 @@
 <body>
 	<div class = "header">
 		<img src = "img/logo.png" width = "120" height="100" style="float:left">
-		<a  href="contactus.php" class="contactus">Contact us</a><br></br>
+		<a href="contactus.php" class="contactus">Contact us</a><br></br>
 		<div class="navigationbar">
-			<a href="home.html">Home</a>
+			<a class="active" href="home.html">Home</a>
 			<a href="aboutus.html">About us</a>
-			<a class="active" href="member.html">Members</a>
+			<a href="member.html">Members</a>
 			<a href="news.html">News</a>
 			<a href="awards.php">Awards</a>
 			
@@ -36,34 +44,28 @@
 		</ul>
 		</div>
 		<div class = "column1">
-		<div class="container1">
-		<img src="img/avatar1.jpg" width="100px" height="100px" style="margin:10px">
-		<h2>Ravinda Anjana</h2>
-		<h3>Profession : Actor</h3>
-		<h3>Age : 32</h3><hr>
+		<canvas id="canvas" ></canvas>
+			<script src="js/script.js"></script>
+			<div>
+			<div class="column2">
 		
-		<img src="img/avatar2.png" width="100px" height="100px" style="margin:10px">
-		<h2>Adhithya Bandara</h2>
-		<h3>Profession : Producer</h3>
-		<h3>Age : 21</h3><hr>
-		
-		<img src="img/avatar3.jpg" width="100px" height="100px" style="margin:10px">
-		<h2>Lasitha Charuka</h2>
-		<h3>Profession : Former Film Director</h3>
-		<h3>Age : 52</h3>
-			
-
-		</div>
-		</div>
+	<form class="award1" method="post" action="submitawards.php" ><center>
 	
-
-		
-		
-
-
-
+	   <label for="jname">Judge Name </label><br><br>
+	   <input type="text" id="jname" name="juname" ><br><br>
+	   <label for="acategory">Award category :</label><br><br>
+	   <input type="text" id="acategory" name="awcategory" ><br><br>
+	   <label for="mname">Award Name :</label><br><br>
+	   <input type="text" id="mname" name="moname" ><br><br>
+	   <input type="submit" class="button2">
+	</center>
+	</form>
+	</div>
+	</div>
 	
-	<div id="footer1"  style="margin-top:70%" >
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="footer1" >
 	<br></br>
 	<div class="footer">
 <div class="email">Email : Gacd@gmail.com</div>

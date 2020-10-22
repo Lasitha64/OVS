@@ -1,3 +1,10 @@
+<?php
+     include_once 'config.php';
+
+
+
+
+?>
 <html>
 <head>
 	<link rel="stylesheet" href="css/styles3.css">
@@ -25,7 +32,7 @@ newd()
 			<a href="aboutus.html">About us</a>
 			<a href="member.html">Members</a>
 			<a href="news.html">News</a>
-			<a class = "active" href="awards.html">Awards</a>
+			<a class = "active" href="awards.php">Awards</a>
 	
 			
 				<input type="text" class="searchbar" placeholder="Search.." name="search">
@@ -51,12 +58,34 @@ newd()
 	<div class= "column1">	
 		<p class="topic"> AWARDS </p>
 		<br></br>
+		<table>
+		<tr>
+		<th>AwardID</th>
+		<th>Judge Name</th>
+		<th>Award category</th>
+		<th>Award name</th>
+		<tr>
+<?php 
+	$sql = "select *from awardtable";
+	$result = $conn1->query($sql);
+	
+	if($result->num_rows>0){
 		
-		<button class="fluid ui button">Awards under "BEST" category(Selected by Members of the Academy)</button>
+		while($row = $result->fetch_assoc()){
+			
+			echo "<tr><td>".$row["Award_ID"]."</td><td>".$row["Judge_Name"]."</td><td> ".$row["Award_category"]."</td><td>".$row["Award_name"]."</td></tr>";
+		}
+		echo "</table>";
+	}
+	else{
+		echo "0 results";
+	}
+
+$conn1->close();
+?>		
+
 <br></br><br></br>
-<button class="fluid ui button">Awards under "popular" category(Selected by people)</button>
-<br></br><br></br>
-<button class="fluid ui button">Special Awards (selected by an EXpert Panel of judges)</button>
+<button> <a href= "Add Award.html"> Add Award</a> </button>
 <br></br>
 	</div>
 	
