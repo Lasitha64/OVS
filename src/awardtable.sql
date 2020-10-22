@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2020 at 06:43 PM
+-- Generation Time: Oct 22, 2020 at 05:37 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,35 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `awards`
+-- Table structure for table `awardtable`
 --
 
-CREATE TABLE `awards` (
-  `Award ID` int(11) NOT NULL,
-  `Judge Name` varchar(50) NOT NULL,
-  `Award category` varchar(50) NOT NULL,
-  `Award name` varchar(50) NOT NULL
+CREATE TABLE `awardtable` (
+  `Award_ID` int(11) NOT NULL,
+  `Judge_Name` varchar(100) NOT NULL,
+  `Award_category` varchar(200) NOT NULL,
+  `Award_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `awardtable`
+--
+
+INSERT INTO `awardtable` (`Award_ID`, `Judge_Name`, `Award_category`, `Award_name`) VALUES
+(1, 'Lasitha', 'Best ', 'Best Fucker'),
+(2, 'Lasitha', 'Best ', 'Best Fucker'),
+(3, 'Adhi', 'Popular', 'Popular fucker');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `awards`
+-- Indexes for table `awardtable`
 --
-ALTER TABLE `awards`
-  ADD PRIMARY KEY (`Award ID`);
+ALTER TABLE `awardtable`
+  ADD PRIMARY KEY (`Award_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `awards`
+-- AUTO_INCREMENT for table `awardtable`
 --
-ALTER TABLE `awards`
-  MODIFY `Award ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `awardtable`
+  MODIFY `Award_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
