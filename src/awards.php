@@ -1,5 +1,8 @@
-<?php 
-	include_once 'config1.php';
+<?php
+     include_once 'config.php';
+
+
+
 
 ?>
 <html>
@@ -55,15 +58,22 @@ newd()
 	<div class= "column1">	
 		<p class="topic"> AWARDS </p>
 		<br></br>
+		<table>
+		<tr>
+		<th>AwardID</th>
+		<th>Judge Name</th>
+		<th>Award category</th>
+		<th>Award name</th>
+		<tr>
 <?php 
-	$sql1 = "select *from awards";
-	$result = $conn1->query($sql1);
+	$sql = "select *from awardtable";
+	$result = $conn1->query($sql);
 	
 	if($result->num_rows>0){
-		echo"<table>";
+		
 		while($row = $result->fetch_assoc()){
 			
-			echo "<tr><td>".$row["Award ID"]."</td><td>".$row["Judge Name"]."</td><td> ".$row["Award category"]."</td><td>".$row["Award name"]."</td></tr>";
+			echo "<tr><td>".$row["Award_ID"]."</td><td>".$row["Judge_Name"]."</td><td> ".$row["Award_category"]."</td><td>".$row["Award_name"]."</td></tr>";
 		}
 		echo "</table>";
 	}

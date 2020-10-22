@@ -2,7 +2,6 @@
 $servername="localhost";
 $username="root";
 $password="";
-
 $db1 = "awards";
 
 
