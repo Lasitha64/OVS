@@ -1,0 +1,151 @@
+
+CREATE table Award
+(
+
+AwardID  varchar(10),
+Categories varchar(30),
+
+CONSTRAINT ovs_pk3 PRIMARY KEY (AwardID)
+);
+CREATE table GuestVoters
+(
+
+GuestID  varchar(10),
+name varchar(30),
+contactno int not NULL,
+email varchar(30),
+address varchar(30),
+password varchar(20),
+
+CONSTRAINT ovs_pk4 PRIMARY KEY (GuestID)
+
+
+);
+CREATE table MemberVoters
+(
+
+MemberID varchar(10),
+email varchar(30),
+password varchar(20)
+
+CONSTRAINT ovs_pk5 PRIMARY KEY (MemberID)
+);
+CREATE table Nominations
+(
+
+
+NominationID varchar(10),
+NominationName varchar(20),
+AwardID  varchar(10),
+
+CONSTRAINT ovs_pk2 PRIMARY KEY (NominationID),
+CONSTRAINT ovs_fk4 FOREIGN KEY (AwardID) REFERENCES Award (AwardID)
+
+);
+CREATE table Voters
+(
+voterID varchar(10),
+MemberID varchar(10),
+GuestID  varchar(10),
+AwardID  varchar(10),
+NominationID varchar(10),
+NominationName varchar(20),
+
+CONSTRAINT ovs_pk1 PRIMARY KEY (voterID),
+CONSTRAINT ovs_fk1 FOREIGN KEY ( MemberID) REFERENCES MemberVoters (MemberID),
+CONSTRAINT ovs_fk2 FOREIGN KEY ( GuestID) REFERENCES GuestVoters (GuestID),
+CONSTRAINT ovs_fk3 FOREIGN KEY ( NominationID) REFERENCES Nominations (NominationID)
+
+
+);
+CREATE table Opinion
+(
+OpinionID varchar(10),
+MemberID varchar(10),
+GuestID varchar(10),
+Comment varchar(100),
+
+CONSTRAINT ovs_pk6 PRIMARY KEY (OpinionID),
+CONSTRAINT ovs_fk5 FOREIGN KEY ( MemberID) REFERENCES MemberVoters (MemberID),
+CONSTRAINT ovs_fk6 FOREIGN KEY ( GuestID) REFERENCES GuestVoters (GuestID)
+);
+CREATE table Award_Cat
+(
+
+AwardID varchar(10),
+Categories varchar(30),
+
+CONSTRAINT ovs_pk7 PRIMARY KEY (AwardID),
+CONSTRAINT ovs_fk7 FOREIGN KEY (AwardID) REFERENCES Award (AwardID)
+);
+
+
+insert into Award(AwardID,categories)
+values('A001','Best Picture'),
+('A002','Best Actor'),
+('A003','Best Actress'),
+('A004','Best director'),
+('A005','Best animated film')
+
+
+insert into GuestVoters(GuestID,name,contactno,email,address,password)
+values('G001','Saman Perera','0754789654','samanp@gmail.com','no10,Temple road,Colombo','srilanka123'),
+('G002','Amal fernando','0774788654','amalf@gmail.com','no20,Church road,Kandy','India123'),
+('G003','Kamal silva','0724789654','kamals@gmail.com','no30,Main road,Galle','Pakistan123'),
+('G004','Sunil shantha','0774786654','sunils@gmail.com','no40,lotus road,Matara','Nepal123'),
+('G005','Jehan vaas','0764789694','Jehanv@gmail.com','no50,Kovil road,Jaffna','Australia123')
+
+insert into MemberVoters(MemberID,email,password)
+values('M001','ruwand@gmail.com','Susipwan123'),
+('M002','samithar@gmail.com','Syzygy123'),
+('M003','kesiriw@gmail.com','Indeepa123'),
+('M004','amithp@gmail.com','Sasip123'),
+('M005','thamirah@gmail.com','Rotary123')
+
+insert into Nominations(NominationID,AwardID,NominationName)
+values('N001','A001','joker'),
+('N002','A001','parasite'),
+('N003','A001','1917'),
+('N004','A001','ford v ferrari'),
+('N005','A001','jojo rabbit')
+
+
+insert into Voters(voterID,MemberID,GuestID,AwardID,NominationID,NominationName)
+values('V001','M001','G001','A001','N001','joker'),
+('V002','M002','G002','A002','N002','Parasite'),
+('V003','M003','G003','A003','N003','1917'),
+('V004','M004','G004','A004','N004','Ford v Ferrari'),
+('V005','M005','G005','A005','N005','Jojo rabbit')
+
+insert into Opinion(OpinionID,MemberID,GuestID,Comment)
+values('O001','M001','G001','There should be more awards'),
+('O002','M002','G002','Good selections'),
+('O003','M003','G003','Bad selections'),
+('O004','M004','G004','Good nominees'),
+('O005','M005','G005','Keep it going')
+
+insert into Award_Cat(AwardID,Categories)
+values('A006','Most popular actor'),
+('A007','Most popular actress'),
+('A008','Most popular movie'),
+('A009','Most popular tv series '),
+('A010','Most popular anime')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
