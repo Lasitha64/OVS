@@ -53,18 +53,20 @@ newd()
                            </ul>
                            
                            </div>
-
+    
 
 	<div class= "column1">	
 		<p class="topic"> AWARDS </p>
 		<br></br>
-		<table>
+		<table class = "coloumn4">
+		
 		<tr>
 		<th>AwardID</th>
 		<th>Judge Name</th>
 		<th>Award category</th>
 		<th>Award name</th>
 		<tr>
+		
 <?php 
 	$sql = "select *from awardtable";
 	$result = $conn1->query($sql);
@@ -85,8 +87,9 @@ $conn1->close();
 ?>		
 
 <br></br><br></br>
-<button> <a href= "Add Award.html"> Add Award</a> </button>
+<button class= "button 3"> <a href= "Add Award.html"> Add Award</a> </button>
 <br></br>
+	
 	</div>
 	
 	<div id="footer1" >

@@ -3,7 +3,7 @@ $servername="localhost";
 $username="root";
 $password="";
 $db = "commentdb";
-$db1 = "awards";
+$db1 = "award";
 $db2 = "register";
 
 

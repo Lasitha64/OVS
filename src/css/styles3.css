@@ -99,7 +99,7 @@ body{
 	
 
 }
-.column1 {
+.column1{
 	float:left;
 	width:60%;
 	padding:10px;
@@ -110,6 +110,27 @@ body{
 	font-size:40px;
 	color:#ffffff
 	
+	
+}
+
+.coloumn4{
+	text-align:center;
+	font-size:30px;
+	color:white;
+	background-color:#fffffff;
+	opacity:0.9;
+}
+
+.button3{background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
 	
 }
 a{
