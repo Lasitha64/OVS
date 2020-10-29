@@ -19,7 +19,7 @@
 		header("Location:awards.php");
 	}
 	else{
-		echo "<script>alert ('Error in insertinh records')</script>";
+		echo "<script>alert ('Error in inserting records')</script>";
 	}
 	
 	mysqli_close($conn1);
