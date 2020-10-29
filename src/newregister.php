@@ -20,11 +20,11 @@
 	$sql = "insert into new(ID,First_Name,Last_Name,Gender,Phone_Number,Email,Address,Birthday,Password,Retype_Password)values('','$data1','$data2','$data3','$data4','$data5','$data6','$data7','$data8','$data9')";
 	
 	if(mysqli_query($conn2, $sql)){
-		echo "<script>alert ('Record Inserted Succefully')</script>";
+		echo "<script>alert ('Record Inserted Successfully')</script>";
 		header("Location:home.html");
 	}
 	else{
-		echo "<script>alert ('Error in insertinh records')</script>";
+		echo "<script>alert ('Error in inserting records')</script>";
 	}
 	
 	mysqli_close($conn2);

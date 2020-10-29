@@ -13,7 +13,7 @@ if($conn -> connect_error){
 	die("Connection Failed :".$conn->connect_error);
 }
 else{
-	echo "Connected Succefully";
+	echo "Connected Successfully";
 }
 
 $conn1 = new mysqli($servername, $username, $password, $db1);
@@ -22,7 +22,7 @@ if($conn1 -> connect_error){
 	die("Connection Failed :".$conn1->connect_error);
 }
 else{
-	echo "Connected Succefully";
+	echo "Connected Successfully";
 }
 
 $conn2 = new mysqli($servername, $username, $password, $db2);
@@ -31,7 +31,7 @@ if($conn2 -> connect_error){
 	die("Connection Failed :".$conn2->connect_error);
 }
 else{
-	echo "Connected Succefully";
+	echo "Connected Successfully";
 }
 
 
